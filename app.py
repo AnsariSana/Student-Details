@@ -24,7 +24,8 @@ def index():
 
 @app.route("/login",methods=["GET", "POST"])
 def login():
-
+    if 'email' in session:
+        return redirect(url_for("show", email = session['email']))
     if request.method == "POST":
         uname = request.form["uname"]
         passw = request.form["passw"]
