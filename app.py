@@ -1,4 +1,4 @@
-from flask import Flask, render_template,flash, redirect,url_for,session,logging,request
+from flask import Flask, render_template,flash, redirect,url_for,session,logging,request, escape
 from pymongo import MongoClient 
 
 
@@ -32,8 +32,13 @@ def login():
         ename = collection.find_one({'email' : uname,'password':passw})
         #print(ename)
         if ename:
-        	session['email'] = uname
-        	return redirect(url_for("show", email = session['email']))
+            if 'email' in session:
+                #return "Logged in as %s" %escape(session['email'])
+                print(session['email'])
+                return redirect(url_for("show", email = session['email']))
+            else:
+        	    session['email'] = uname
+        	    return redirect(url_for("show", email = session['email']))
         else:
         	#flash("enter correct credentials")
         	return redirect(url_for("login"))
@@ -88,8 +93,15 @@ def getgrades(std,mail):
 	return render_template("grades.html",std = std)
 
 
+@app.route("/logout")
+def logout():
+    if 'email' in session:
+        session.pop('email',None)
+        return redirect(url_for("login"))
+
+
+
 
 
 if __name__ == '__main__':
-	app.run(debug = True)
-#app.run(port=5000)
+    app.run(debug = True)
