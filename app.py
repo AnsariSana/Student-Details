@@ -1,9 +1,12 @@
 from flask import Flask, render_template,flash, redirect,url_for,session,logging,request, escape
 from pymongo import MongoClient 
-
+import datetime
+from passlib.hash import sha256_crypt
 
 app = Flask(__name__)
 app.secret_key = "abc"
+app.config['PERMANENT_SESSION_LIFETIME'] =  datetime.timedelta(minutes=30)
+#app.permanent_session_lifetime = datetime.timedelta(minutes = 1)
 try: 
     conn = MongoClient() 
     print("Connected successfully!!!") 
@@ -30,12 +33,13 @@ def login():
         uname = request.form["uname"]
         passw = request.form["passw"]
         #print(uname)
-        ename = collection.find_one({'email' : uname,'password':passw})
+        ename = collection.find_one({'email' : uname})
         #print(ename)
-        if ename:
+        if ename and sha256_crypt.verify(passw,ename['password']):
             if 'email' in session:
                 #return "Logged in as %s" %escape(session['email'])
                 print(session['email'])
+                session.permanent = True
                 return redirect(url_for("show", email = session['email']))
             else:
         	    session['email'] = uname
@@ -52,10 +56,8 @@ def register():
         name = request.form['name']
         rollno = request.form['rollno']
         mail = request.form['mail']
-        passw = request.form['passw']
+        passw = sha256_crypt.encrypt(request.form['passw'])
         std = request.form['std']
-
-
         rec_id1 = collection.insert({'name' : name,
         	'rollno' : rollno,
         	'email' : mail,
@@ -97,8 +99,10 @@ def getgrades(std,mail):
 @app.route("/logout")
 def logout():
     if 'email' in session:
+        print(session['email'])
         session.pop('email',None)
         return redirect(url_for("login"))
+    return redirect(url_for("login"))
 
 
 

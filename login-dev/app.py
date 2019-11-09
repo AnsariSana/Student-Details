@@ -2,7 +2,7 @@ from flask import Flask, render_template,flash, redirect,url_for,session,logging
 from pymongo import MongoClient 
 import datetime, socket, requests, json
 from passlib.hash import sha256_crypt
-
+from loggedincheck import login_check
 
 app = Flask(__name__)
 app.secret_key = "abc"
@@ -60,25 +60,24 @@ def register():
     return render_template("register.html")
 
 @app.route("/show/<email>")
+@login_check(session)
 def show(email,methods = ["GET", "POST"]):
  	print(email)
  	data = collection.find_one({"email" : email})
 
  	return render_template("show.html", email = data['email'])
 @app.route("/logout")
+@login_check(session)
 def logout():
-    if 'email' in session:
-        print(session['email'])
-        session.pop('email',None)
+    session.pop('email',None)
     return redirect(url_for("login"))
 
 
 @app.route("/test")
+@login_check(session)
 def test():
     print("in test")
-    if 'email' in session:
-        return redirect(url_for("index"))
-    return redirect(url_for("login"))
+    return redirect(url_for("show", email = session['email']))
 
 
 
