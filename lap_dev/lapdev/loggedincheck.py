@@ -8,7 +8,7 @@ def login_check(session):
             if 'email' in session:
                     return func(*args,**kwargs)
             else:
-                    return redirect(url_for("login"))
+                    return redirect(url_for("user.login"))
            
         return login_check_func
     return login_check_runfunc
