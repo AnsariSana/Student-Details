@@ -1,0 +1,128 @@
+{% extends "masterlayout.html" %}
+
+{% block content %}
+<div class="page-title">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="text-white fw-800">Getting Started</h2>
+        <p class="text-white mb-0"><a class="text-white" href="{{url_for('baseroute.index')}}">Home</a><span class="px-2"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="{{url_for('baseroute.getting_started')}}" class="text-white">Getting Started</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-3 col-md-6">
+      <div class="step-icons">
+        <img src="https://img.icons8.com/dotty/70/000000/laptop.png">
+      </div>
+      <div class="step-content">
+        <h6 class="my-2 fw-800">Register</h6>
+        <p class="fs-13 mt-3">To start investing at GreenArc's, you need to register as an investor. This is a
+          simple process that will take less than 5 minutes.</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="step-icons">
+        <img src="https://img.icons8.com/dotty/70/000000/bank-card-back-side.png">
+      </div>
+      <div class="step-content">
+        <h6 class="my-2 fw-800">Transfer funds to your investor account
+          </h5>
+          <p class="fs-13 mt-3">Once you have registered with GreenArc's, transfer the desired amount of money
+            from your bank or e-money account to your GreenArc's investor account.</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="step-icons">
+        <img src="https://img.icons8.com/carbon-copy/70/000000/positive-dynamic--v1.png">
+      </div>
+      <div class="step-content">
+        <h6 class="my-2 fw-800">Build your investment portfolio</h6>
+        <p class="fs-13 mt-3">Once the money is added to your GreenArc's investor account, you can begin
+          building your investment portfolio, either by using the Auto Invest tool or by browsing loan
+          listings.</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="step-icons">
+        <img src="https://img.icons8.com/dotty/70/000000/banknotes.png">
+      </div>
+      <div class="step-content">
+        <h6 class="my-2 fw-800">Receive monthly payments</h6>
+        <p class="fs-13 mt-3">Each month, you will receive payments from borrowers consisting of the
+          principal and interest payments*. You can choose to reinvest these funds in other loans or transfer
+          them back to your
+          bank or e-money account.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-1">
+    <div class="col-md-12">
+      <p class="fs-12">*Neither GreenArc's nor the loan originator is responsible for a borrower failing to
+        service the loan, including for late payments. In the case that a borrower is unable to repay the
+        loan, investors may lose some or all of their invested capital.</p>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <div class="cta-wrapper text-center"><a href="#" class="btn btn-primary cta-button">
+          Start Investing
+        </a></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-4">
+      <h3 class="fw-800">What does the GreenArc's investor profile offer?</h3>
+    </div>
+    <div class="col-md-6">
+      <h5 class="mb-3 b-b1 pb-2 fw-800">Loan Listings</h5>
+      <img src="assets/img/s1.png" class="investment-steps-images img-fluid" style="height:280px; width:100%" />
+
+      <p class="fs-13 mt-3">You can view all available loans in one place and choose loans in which to
+        invest. Additional details are available for each loan, including information about the borrower and
+        the collateral (if
+        any). You can also review the payment schedule, debt collection updates, and other investments in
+        the loan.</p>
+    </div>
+
+    <div class="col-md-6">
+      <h5 class="mb-3 b-b1 pb-2 fw-800">Auto Invest</h5>
+      <img src="assets/img/s2.png" class="investment-steps-images img-fluid" style="height:280px; width:100%" />
+      <p class="fs-13 mt-3">Auto Invest is the easiest and most convenient way to invest in loans and build
+        a diversified portfolio. You can set your own Auto Invest criteria and change them at any time. You
+        can also pause or cancel Auto Invest whenever you wish.</p>
+    </div>
+
+    <div class="col-md-6 mt-3">
+      <h5 class="mb-3 b-b1 pb-2 fw-800">Secondary Market</h5>
+      <img src="assets/img/s3.png" class="investment-steps-images img-fluid" style="height:280px; width:100%" />
+      <p class="fs-13 mt-3">If you want to sell your investment before full repayment of the loan, you can
+        use the secondary market. Investors can see all loans listed in the secondary market in Loan Listings.
+      </p>
+    </div>
+
+    <div class="col-md-6 mt-3">
+      <h5 class="mb-3 b-b1 pb-2 fw-800">Account Overview</h5>
+      <img src="assets/img/s4.png" class="investment-steps-images img-fluid" style="height:280px; width:100%" />
+      <p class="fs-13 mt-3">You can view all your transactions in your Account Overview. Loans in which you
+        have
+        invested can be seen under the My Investments tab. Remotely signed contracts for each of your
+        investments are also saved there.</p>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <div class="cta-wrapper text-center"><a href="#" class="btn btn-primary cta-button">
+          Start Investing
+        </a></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "masterlayout.html" %}
+{% block content%}
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="text-white fw-800">Contact Us</h2>
+                <p class="text-white mb-0"><a class="text-white" href="{{url_for('baseroute.index')}}">Home</a><span class="px-2"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="{{url_for('baseroute.contact')}}" class="text-white">Contact Us</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-6">
+        <div id="gmap_canvas">
+					<iframe class="contactmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.791119194263!2d103.85554181475393!3d1.3001639990517138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19b06775a6b5%3A0xd43ff9ccc6fd13a3!2s600+North+Bridge+Rd%2C+10+Parkview+Square%2C+Singapore+188778!5e0!3m2!1sen!2sin!4v1547012222332" frameborder="0" style="border:0; width:100%; height:500px" allowfullscreen=""></iframe>
+				</div>
+        </div>
+        <div class="col-md-6">
+        <h5 class="mb-3 b-b1 pb-2 fw-800">Send us a Message</h5>
+        <form name="sentMessage" id="contactForm" novalidate="">
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Full Name:</label>
+              <input type="text" class="form-control" id="name" required="" data-validation-required-message="Please enter your name.">
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Phone Number:</label>
+              <input type="tel" class="form-control" id="phone" required="" data-validation-required-message="Please enter your phone number.">
+            <div class="help-block"></div></div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Email Address:</label>
+              <input type="email" class="form-control" id="email" required="" data-validation-required-message="Please enter your email address.">
+            <div class="help-block"></div></div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Message:</label>
+              <textarea rows="5" cols="20" class="form-control" id="message" required="" data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+            <div class="help-block"></div></div>
+          </div>
+          <div id="success"></div>
+          <!-- For success/fail messages -->
+          <button type="submit" class="btn btn-primary float-right" id="sendMessageButton">Send Message</button>
+        </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

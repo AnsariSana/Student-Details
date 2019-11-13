@@ -1,38 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <title>Login | Flask</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% extends "masterlayout.html" %}
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container">
-        <div class="row" style="margin-top: 40px">
-            <div class="col-sm-6">
-                <form method="POST">
-                    <div class="form-group">
-                      <label for="email">Email : </label>
-                      <input type="text" name="uname" class="form-control" id="uname">
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Password : </label>
-                      <input type="password" name="passw" class="form-control" id="passw">
-                    </div>
-                    <button type="submit" class="btn form-control btn-default">Login</button>
-                </form>
-            </div>
-        </div>
+{% block content %}
+<div class="page-title">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="text-white fw-800">Login</h2>
+        <p class="text-white mb-0"><a class="text-white" href="{{url_for('baseroute.index')}}">Home</a><span class="px-2"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="{{url_for('user.login')}}" class="text-white">Login</a></p>
+      </div>
     </div>
+  </div>
+</div>
 
+<div class="container">
+  <div class="row my-5">
+    <div class="col-md-8 mx-auto">
+      <div class="login-form">
+        <div class="login-body">
+          <form class="mt-4" action="#" method="POST">
+            <div class="form-group">
+              <label class="fs-14">Email</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-white"><i class="fa fa-envelope"></i></span>
+                </div>
+                <input type="email" name = "email" class="form-control" placeholder="eg. johndoe@gmail.com">
+              </div>
+            </div>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
-</html>
+            <div class="form-group">
+              <label class="fs-14">Name</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-white"><i class="fa fa-user"></i></span>
+                </div>
+                <input type="text" name = "name" class="form-control" placeholder="eg. johndoe">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="fs-14">Password</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-white"><i class="fa fa-key"></i></span>
+                </div>
+                <input type="password" name = "password" class="form-control" id="password" placeholder="eg. *******">
+                <div class="input-group-append">
+                  <span class="input-group-text bg-white fs-13 show-hide-toggle" id="toggleBtn">Show</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="checkbox">
+                <label><input type="checkbox" value="" class="mr-2 remember-me">Remember me</label>
+              </div>
+            </div>
+
+            <div class="form-group clearfix my-4 text-center">
+              <button type="submit" class="btn btn-cta btn-login">LOGIN</button>
+            </div>
+            <hr>
+            <div class="form-group text-center">
+              <span>Not a Customer? <a href="#" class="btn-link-primary text-capitalize">Create New Account</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

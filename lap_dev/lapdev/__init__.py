@@ -13,9 +13,12 @@ BaseDB.init()
 #from lapdev.extra import routes
 #from lapdev import routes #imported at the end to prevent circular import bcoz app var is used in routes file
 
-from lapdev.routes.authroutes import user
+from lapdev.routes.auth_routes import user
 from lapdev.routes.extraroutes import extra
+from lapdev.routes.base_routes import base_route
+
 
 app.register_blueprint(user)
+app.register_blueprint(base_route)
 app.register_blueprint(extra)
 

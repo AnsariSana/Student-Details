@@ -11,9 +11,9 @@ extra = Blueprint("extra",__name__)
 @login_check(session)
 def show(email,methods = ["GET", "POST"]):
  	print(email)
- 	data = BaseDB.retrieve(collection = "users", query = {"email":email})
+ 	#data = BaseDB.retrieve(collection = "users", query = {"email":email})
 
- 	return render_template("show.html", email = data['email'])
+ 	return render_template("my-account.php", email = email)
 
 
 @extra.route("/test")

@@ -1,0 +1,74 @@
+@import "variables";
+
+.loans-table .container-fluid {
+    padding: 0 !important;
+}
+
+.irs--flat {
+
+    .irs-bar,
+    .irs-from,
+    .irs-to,
+    .irs-single {
+        background-color: $blue;
+    }
+
+    .irs-from:before,
+    .irs-to:before,
+    .irs-single:before {
+        border-top: $blue;
+    }
+
+    .irs-handle {
+        i {
+            &:first-child {
+                background-color: $blue;
+            }
+        }
+
+        &:hover {
+            i {
+                &:first-child {
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+}
+
+// .irs--flat .irs-handle.state_hover>i:first-child, .irs--flat .irs-handle:hover>i:first-child
+
+.irs--sharp {
+
+    .irs-bar,
+    .irs-from,
+    .irs-to,
+    .irs-single {
+        background-color: $blue;
+    }
+
+    .irs-line {
+        background-color: $blue;
+    }
+
+    .irs-from:before,
+    .irs-to:before,
+    .irs-single:before {
+        border-top: $blue;
+    }
+
+    .irs-handle {
+        background-color: $blue;
+
+        i {
+            &:first-child {
+                border-top-color: $blue;
+            }
+        }
+
+        &:hover,
+        .state_hover {
+            background-color: $blue;
+        }
+    }
+}

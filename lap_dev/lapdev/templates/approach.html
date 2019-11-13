@@ -1,0 +1,40 @@
+{% extends "masterlayout.html" %}
+{% block content %}
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="text-white fw-800">Our Approach</h2>
+                <p class="text-white mb-0"><a class="text-white" href="{{url_for('baseroute.index')}}">Home</a><span class="px-2"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="{{url_for('baseroute.approach')}}" class="text-white">Our Approach</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-8">
+            <p>GreenArc Capital works with platforms, companies and investors in developing financing
+                solutions structured to provide market returns which can be replicated and scaled.
+            </p>
+            <p>To create the appropriate risk adjusted returns to “crowd in” institutional capital, we use:</p>
+            <ul>
+                <li>Portfolio Aggregation</li>
+                <li>Securitisation</li>
+                <li>Blended Finance</li>
+                <li>FX Hedging</li>
+            </ul>
+            <p>We replicate and scale our successful financing solutions by partnering with: </p>
+            <ul>
+                <li>Sources of Capital Aligned With Our Mission To Address The Impact Credit Gap</li>
+                <li>Best-In Class Technology, Risk Scoring and Data Analytics Platform</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <img src="https://www.macfound.org/media/photos/brochure_icons.jpg" class="img-fluid" />
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

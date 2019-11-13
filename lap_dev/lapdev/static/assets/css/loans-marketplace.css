@@ -1,0 +1,54 @@
+.loans-table .container-fluid {
+  padding: 0 !important;
+}
+
+.irs--flat .irs-bar,
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  background-color: #0B4279;
+}
+
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
+  border-top: #0B4279;
+}
+
+.irs--flat .irs-handle i:first-child {
+  background-color: #0B4279;
+}
+
+.irs--flat .irs-handle:hover i:first-child {
+  background-color: #0B4279;
+}
+
+.irs--sharp .irs-bar,
+.irs--sharp .irs-from,
+.irs--sharp .irs-to,
+.irs--sharp .irs-single {
+  background-color: #0B4279;
+}
+
+.irs--sharp .irs-line {
+  background-color: #0B4279;
+}
+
+.irs--sharp .irs-from:before,
+.irs--sharp .irs-to:before,
+.irs--sharp .irs-single:before {
+  border-top: #0B4279;
+}
+
+.irs--sharp .irs-handle {
+  background-color: #0B4279;
+}
+
+.irs--sharp .irs-handle i:first-child {
+  border-top-color: #0B4279;
+}
+
+.irs--sharp .irs-handle:hover,
+.irs--sharp .irs-handle .state_hover {
+  background-color: #0B4279;
+}

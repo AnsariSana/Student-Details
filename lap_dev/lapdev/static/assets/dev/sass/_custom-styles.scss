@@ -1,0 +1,222 @@
+/* Scroller */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.custom-scrollbar::scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0px;
+}
+
+.custom-scrollbar::scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0px;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #ddd;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.custom-scrollbar::scrollbar-thumb {
+    border-radius: 10px;
+    background: #ddd;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.stats-icon {
+    padding: 10px 30px;
+    position: absolute;
+    margin-top: -20px;
+    margin-right: 15px;
+    // left: 32px;
+    border-radius: 3px;
+    z-index: 99;
+}
+
+.stats-icon i {
+    overflow: unset;
+    color: #fff;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.stats-meta {
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.portfolio-size {
+    background: $blue;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgb(48, 91, 138);
+    min-width: 116px;
+}
+
+.monthly-return {
+    background: #fab63f;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(255, 152, 0, .4);
+    min-width: 116px;
+}
+
+.impact-score {
+    background: #fe413b;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(244, 67, 54, .4);
+    min-width: 116px;
+}
+
+.active-loans {
+    background: $primary;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(76, 175, 80, .4);
+    min-width: 116px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-11 {
+    font-size: 11px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.cta-wrapper {
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 50px;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.cta-wrapper .cta-button {
+    transform: translateY(50%);
+}
+
+.b-b1 {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.investment-steps-images {
+    width: 100%;
+    box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.control-label {
+    padding-left: 6px;
+    font-size: 13px !important;
+    display: inline !important;
+    margin-top: 0.5rem;
+}
+
+.p-sticky-temp {
+    position: sticky;
+    z-index: 1;
+    right: 20px;
+    top: 76px;
+}
+
+.fixed-top {
+    position: fixed !important;
+}
+
+
+.form-control:focus {
+    border-color: $primary;
+}
+
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #6c6d70;
+    border-color: #6c6d70 #6c6d70 #6c6d70;
+}
+
+.b-b0 {
+    border-bottom: none !important;
+}
+
+.page-item.active .page-link {
+    background-color: $light-gray;
+    border-color: $light-gray;
+}
+
+body.fixed-nav {
+    padding-top: 48px !important;
+}
+
+
+.card-header {
+    background: $secondary;
+    padding: .5rem 1.25rem !important;
+    // margin-bottom: 24px;
+    border-bottom: 1px solid #b8dcbf !important;
+}
+
+.bar-primary {
+    border: none
+}
+
+.content-wrapper {
+    min-height: calc(100vh - 51px);
+    padding-top: 2.5rem;
+    padding-bottom: 56px;
+    background: #f4f6f9;
+}
+
+@media only screen and (max-width: 600px) {
+    .pl-xs-15 {
+        padding-left: 15px !important;
+    }
+}
+
+g[class^='raphael-group-'][class$='-creditgroup'] {
+    display: none !important;
+}
+
+.navbar-nav li.nav-item.active {
+    background: #59bd51;
+}
+
+.my-account .card .card-body {
+    min-height: 553px !important;
+}
+
+.breadcrumb {
+    display: inline-flex;
+
+    .breadcrumb-item {
+        font-size: 12px;
+    }
+}
+
+.btn-outline-primary:hover {
+    color: $primary !important;
+}

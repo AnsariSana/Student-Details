@@ -1,0 +1,30 @@
+.interest-rate-stats {
+    p {
+        font-size: 18px;
+        font-weight: 900;
+        margin-bottom: 0;
+    }
+
+    span {
+        font-weight: 100;
+        margin-left: 16px;
+        font-size: 13px;
+    }
+}
+
+#current-investments_wrapper,
+#finished-investments_wrapper {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+#current-investments,
+#finished-investments_wrapper {
+    tr {
+        white-space: nowrap;
+    }
+
+    th {
+        white-space: normal;
+    }
+}
